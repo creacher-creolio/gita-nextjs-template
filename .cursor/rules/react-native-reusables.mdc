@@ -1,0 +1,30 @@
+---
+description: react native reusables
+globs:
+alwaysApply: false
+---
+- Import components directly by name (e.g., import { Button } from '@/components/ui/button')
+- Customize reusable components with appropriate props before creating custom versions
+- Use the provided theming system to maintain consistency across the app
+- Leverage hooks from the library (useForm, useBottomSheet, etc.) for common patterns
+- Extend reusable components in the components/ui folder through composition rather than modification
+- Use provided transition and animation utilities for micro-interactions
+- Apply consistent spacing using the library's spacing system
+- Integrate reusable components with NativeWind classes for custom styling
+
+## Component Design
+- Create single-responsibility components
+- Add proper TypeScript interfaces for props
+- Implement sensible default values
+- Design for both light and dark mode
+
+## Implementation
+- Ensure accessibility compliance with ARIA props
+- Make components adaptable to different screen sizes
+- Use NativeWind for consistent styling
+- Implement proper error and loading states
+
+## Documentation
+- Add clear comments for complex logic
+- Include usage examples for complex components
+- Document component APIs and required props

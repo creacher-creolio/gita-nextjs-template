@@ -1,0 +1,15 @@
+---
+description: react native: safe area management
+globs:
+alwaysApply: false
+---
+## Implementation
+- Use SafeAreaView for root-level screens or containers
+- Apply useSafeAreaInsets() for manual inset management
+- Use NativeWind's pt-safe and pb-safe for inset-aware padding
+- Handle landscape and portrait orientations appropriately
+
+## Device Compatibility
+- Account for notches, dynamic islands, and rounded corners
+- Test on different device sizes and orientations
+- Ensure content remains accessible in all device states

@@ -1,0 +1,26 @@
+---
+description: react: state management
+globs:
+alwaysApply: false
+---
+## Architecture
+- Use Legend State as primary state management solution
+- Keep UI state local to components when possible
+- Lift state up only when necessary for sharing
+- Separate UI state from application state
+
+## Data Flow
+- Implement unidirectional data flow
+- Use context providers for shared state
+- Avoid prop drilling with proper state architecture
+- Handle asynchronous state updates with appropriate patterns
+
+## Best Practices
+- Normalize complex state structures
+- Implement proper loading and error states
+- Use immutable patterns for state updates
+- Add appropriate TypeScript types for all state
+- Use useState for simple component-local state
+- Implement React Query for server state
+- Create custom hooks to encapsulate state logic
+- Follow atomic pattern for state composition

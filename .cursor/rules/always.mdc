@@ -1,0 +1,57 @@
+---
+description: always use these rules
+globs:
+alwaysApply: true
+---
+## Code Style
+- Use kebab-case for all file/folder names except:
+    - use PascalCase for non-page/non-screen component file names
+    - use camelCase for hook file names
+- Use PascalCase for components, camelCase for variables/functions
+- Keep files under 200 lines and functions under 10 lines
+- Use meaningful variable names (10-30 chars) with auxiliary verbs (isLoading, hasError)
+- Place important functions at the top, subfunctions below
+- Add file path comment at the top of each file
+- Use double quotes
+- Use semi-colons at end of lines
+- Tab width should be 4 spaces; don't use tabs
+
+## Documentation
+- Add comments for complex logic or non-obvious code
+- All non-self-explanatory functions should have brief explanatory comments
+- Preserve existing comments unless obsolete
+- For React Native projects: only use block comments
+
+## Project Structure
+- Follow structure: 'app/', 'components/', 'utils/', 'hooks/', etc.
+- Use absolute imports with '@/' prefix (import { Button } from '@/components')
+
+## Development
+- Adhere to prettier formatting rules in .prettierrc.js
+- Ensure a11y standards with ARIA roles and React Native accessibility props
+- Check for type issues after making changes
+- Add micro interactions to UI elements
+- Use package versions specified in package.json/requirements.txt
+
+## Environment
+- Use PowerShell syntax for terminal commands on Windows
+- Use pnpm instead of npm
+- Prefer text, button, input, label, and alert from components/ui instead of from react-native
+
+## Accessibility
+- Always include accessibilityLabel and accessibilityRole for interactive components.
+- Ensure text components have sufficient font size (min 16px) and contrast ratios (4.5:1).
+- Use expo-haptics for tactile feedback on user actions.
+- Follow WCAG 2.1 Level AA guidelines.
+
+## Best Practices
+- DRY (Don't Repeat Yourself)
+- SoC (Separation of Concerns): could involve file restructuring/splitting files, etc,...
+- KISS (Keep it Simple, Stupid): make sure the code is easy to read and understand
+- SOLID
+    1 - Single Responsibility Principle (SRP)
+    2 - Open/Closed Principle (OCP)
+    3 - Liskov Substitution Principle (LSP)
+    4 - Interface Segregation Principle (ISP)
+    5 - Dependency Inversion Principle (DIP)
+- YAGNI (You Aren't Gonna Need It): remove anything not currently being used

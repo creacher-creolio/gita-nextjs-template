@@ -1,0 +1,25 @@
+---
+description: react native
+globs:
+alwaysApply: false
+---
+## Architecture
+- Use functional components with hooks instead of class components
+- Use proper error boundaries for components that fetch data
+- Handle platform-specific code with Platform.OS or platform-specific file extensions
+
+## UI/UX
+- Ensure UI adapts to different screen sizes and orientations
+- Use proper keyboard handling with KeyboardAvoidingView and dismissKeyboard
+- Prefer FlatList or SectionList over ScrollView for long lists
+- Implement responsive layouts with flex components
+
+## Performance
+- Test on both iOS and Android regularly during development
+- Use Expo's optimized APIs when available
+- Leverage Reanimated and Gesture Handler for animations and interactions
+
+## Project Specifics
+- Use components from the components folder whenever possible
+- Integrate with NativeWind for styling (see styling.mdc)
+- Implement safe area management for notches and dynamic island

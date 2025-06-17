@@ -1,0 +1,22 @@
+---
+description: error handling and validation
+globs:
+alwaysApply: false
+---
+## Error Handling
+- Implement error boundaries for critical components
+- Use try/catch blocks for error-prone operations
+- Log errors with appropriate context information
+- Create user-friendly error messages for display
+
+## Validation
+- Use zod for schema validation in forms and data
+- Implement client-side validation before submission
+- Show inline validation errors with clear messaging
+- Validate user input as early as possible
+
+## Error Recovery
+- Implement auto-retry for network operations
+- Create graceful fallbacks for failed operations
+- Preserve user input during form submission errors
+- Provide clear recovery instructions for users

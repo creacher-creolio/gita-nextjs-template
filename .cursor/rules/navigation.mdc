@@ -1,0 +1,22 @@
+---
+description: react native navigation
+globs:
+alwaysApply: false
+---
+## Structure
+- Use React Navigation as the navigation library
+- Implement Stack, Tab, and Drawer navigation as needed
+- Organize navigation in a dedicated navigation/ directory
+- Create type-safe route names with TypeScript
+
+## Implementation
+- Use navigation hooks (useNavigation, useRoute) instead of props
+- Pass minimal data through route params
+- Implement deep linking for important screens
+- Handle authentication flows with proper navigation guards
+
+## UX/Performance
+- Add transition animations for navigation actions
+- Implement proper loading states during navigation
+- Prefetch data for anticipated navigation targets
+- Use header buttons with proper touch feedback

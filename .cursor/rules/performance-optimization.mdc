@@ -1,0 +1,27 @@
+---
+description: performance optimization
+globs:
+alwaysApply: false
+---
+## React Optimization
+- Use memo(), useCallback(), and useMemo() for expensive operations
+- Avoid anonymous functions in render methods
+- Implement proper memoization for selectors and derived values
+
+## State Management
+- Minimize useState/useEffect; prefer context and reducers
+- Use Legend State observable selectors over derived atoms
+- Apply task atoms for async operations instead of useEffect
+
+## UI Performance
+- Implement list virtualization with FlatList/SectionList
+- Apply proper key properties based on unique identifiers
+- Use Reanimated's useAnimatedStyle for smooth animations
+- Optimize Image component with resizeMode and dimensions
+- Implement lazy loading for off-screen content
+
+## Measuring & Monitoring
+- Profile component render times with Performance API
+- Use InteractionManager for heavy operations after animations
+- Profile regularly with Expo Dev Tools or React DevTools
+- Use Expo AppLoading and SplashScreen for optimized startup

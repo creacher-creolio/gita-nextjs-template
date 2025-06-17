@@ -1,0 +1,23 @@
+---
+description: apply to any files in the components folder
+globs: components/*.tsx
+alwaysApply: false
+---
+## Architecture
+- Create purpose-specific components that do one thing well
+- Split components into smaller ones if they exceed 150 lines
+- Export components individually from barrel files (index.ts)
+- [react-native-reusables.mdc](mdc:.cursor/rules/react-native-reusables.mdc)
+- Whenever possible, use existing components from the components/ui directory instead of creating new ones
+- Never modify components in the components/ui directory directly; create wrapper components if necessary
+
+## Implementation
+- Implement TypeScript interfaces for all component props
+- Add appropriate accessibility attributes (accessible, accessibilityLabel)
+- Apply React Native Reusables when available
+- Implement loading, error, and empty states for data-dependent components
+
+## Performance
+- Use React.memo() for expensive components that re-render often
+- Avoid anonymous function creation in render methods
+- Implement proper memoization for callbacks and derived values

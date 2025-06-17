@@ -1,0 +1,22 @@
+---
+description: when creating buttons, pressables and other elements with onpress
+globs:
+alwaysApply: false
+---
+## Implementation
+- Use Pressable instead of TouchableOpacity for better control
+- Add haptic feedback for important interactions (react-native-haptic-feedback)
+- Include visual feedback with opacity/scale changes on press
+- Use onPressIn for header buttons (Stack.Screen options headerRight)
+
+## Accessibility
+- Add accessibilityLabel and accessibilityHint to interactive elements
+- Set proper accessibilityRole (button, link, etc.)
+- Make touch targets minimum 44×44 points
+- Use hitSlop to expand touchable area of small elements
+
+## Best Practices
+- Debounce rapid presses to prevent double submissions
+- Disable buttons during loading states with visual indicators
+- Add ripple effect on Android and opacity changes on iOS
+- Implement proper loading states during async operations
