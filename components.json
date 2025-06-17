@@ -18,9 +18,9 @@
         "api": "@/lib/api",
         "constants": "@/lib/constants",
         "contexts": "@/lib/contexts",
+        "data": "@/lib/data",
         "services": "@/lib/services",
         "state": "@/lib/state",
-        "styles": "@/lib/styles",
         "types": "@/lib/types",
         "utils": "@/lib/utils"
     },

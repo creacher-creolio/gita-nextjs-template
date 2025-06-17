@@ -22,7 +22,14 @@ const compat = new FlatCompat({
 });
 
 export default defineConfig([
-    globalIgnores([".prettierrc.js", "**/.expo/", "**/.next/", "**/app-example/", "**/build/", "**/dist/"]),
+    globalIgnores([
+        ".prettierrc.js",
+        "**/.next/",
+        "**/*.config.ts",
+        "**/build/",
+        "**/dist/",
+        "node_modules/",
+    ]),
     {
         files: ["**/*.{js,jsx,ts,tsx}"],
         extends: compat.extends(
