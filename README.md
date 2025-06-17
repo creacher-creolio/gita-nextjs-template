@@ -1,3 +1,9 @@
+USE AI TO UPDATE THIS README ONCE THE TEMPLATE IS COMPLETE, ASKING AI TO CONSIDER ALL OF THE PACKAGES AND FILES IN THE PROJECT, ESP. SUPABASE, LEGEND STATE, ETC,...
+    - should also explain not to use tailwind color classes such as blue-500, but to only use classes defined in globals.css. if needed, create new variables in that file and then use the new class.
+
+---
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
