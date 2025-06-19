@@ -6,7 +6,6 @@ import typescriptParser from "@typescript-eslint/parser";
 import eslintConfigPrettier from "eslint-config-prettier";
 import _import from "eslint-plugin-import";
 import jsxA11y from "eslint-plugin-jsx-a11y";
-import prettier from "eslint-plugin-prettier";
 import reactPlugin from "eslint-plugin-react";
 import reactHooksPlugin from "eslint-plugin-react-hooks";
 import { defineConfig, globalIgnores } from "eslint/config";
@@ -35,7 +34,6 @@ export default defineConfig([
 
         plugins: {
             import: _import,
-            prettier,
             "@typescript-eslint": typescriptEslint,
             react: reactPlugin,
             "react-hooks": reactHooksPlugin,
@@ -147,14 +145,6 @@ export default defineConfig([
                     max: 250,
                     skipBlankLines: false,
                     skipComments: false,
-                },
-            ],
-
-            // Prettier integration
-            "prettier/prettier": [
-                "warn",
-                {
-                    endOfLine: "auto",
                 },
             ],
         },
