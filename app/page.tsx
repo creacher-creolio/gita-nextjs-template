@@ -1,65 +1,139 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { createClient } from "@/lib/supabase/server";
+import { Shield, Lock, User } from "lucide-react";
+import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+
     return (
-        <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-            <main className="row-start-2 flex flex-col items-center gap-[32px] sm:items-start">
-                <Image className="dark:invert" src="/next.svg" alt="Next.js logo" width={180} height={38} priority />
-                <ol className="list-inside list-decimal text-center font-[family-name:var(--font-geist-mono)] text-sm/6 sm:text-left">
-                    <li className="mb-2 tracking-[-.01em]">
-                        Get started by editing{" "}
-                        <code className="rounded bg-black/[.05] px-1 py-0.5 font-[family-name:var(--font-geist-mono)] font-semibold dark:bg-white/[.06]">
-                            app/page.tsx
-                        </code>
-                        .
-                    </li>
-                    <li className="tracking-[-.01em]">Save and see your changes instantly.</li>
-                </ol>
-
-                <div className="flex flex-col items-center gap-4 sm:flex-row">
-                    <a
-                        className="bg-foreground text-background flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent px-4 text-sm font-medium transition-colors hover:bg-[#383838] sm:h-12 sm:w-auto sm:px-5 sm:text-base dark:hover:bg-[#ccc]"
-                        href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <Image className="dark:invert" src="/vercel.svg" alt="Vercel logomark" width={20} height={20} />
-                        Deploy now
-                    </a>
-                    <a
-                        className="flex h-10 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-4 text-sm font-medium transition-colors hover:border-transparent hover:bg-[#f2f2f2] sm:h-12 sm:w-auto sm:px-5 sm:text-base md:w-[158px] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-                        href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        Read our docs
-                    </a>
+        <div className="min-h-screen flex flex-col items-center justify-center p-8 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+            <div className="max-w-4xl w-full space-y-8">
+                {/* Header */}
+                <div className="text-center space-y-4">
+                    <div className="flex justify-center items-center gap-2">
+                        <Shield className="h-8 w-8 text-primary" />
+                        <h1 className="text-4xl font-bold tracking-tight">Next.js Supabase Starter</h1>
+                    </div>
+                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                        A complete authentication system with login, logout, and protected routes powered by Supabase and Next.js
+                    </p>
                 </div>
-            </main>
-            <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]">
-                <a
-                    className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-                    href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    <Image aria-hidden src="/file.svg" alt="File icon" width={16} height={16} />
-                    Learn
-                </a>
-                <a
-                    className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-                    href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    <Image aria-hidden src="/window.svg" alt="Window icon" width={16} height={16} />
-                    Examples
-                </a>
-                <a
-                    className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-                    href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    <Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
-                    Go to nextjs.org →
-                </a>
-            </footer>
+
+                {/* Authentication Status */}
+                <div className="flex justify-center">
+                    <Card className="w-full max-w-md">
+                        <CardHeader className="text-center">
+                            <div className="flex justify-center mb-2">
+                                <User className="h-8 w-8 text-primary" />
+                            </div>
+                            <CardTitle>
+                                {user ? "Welcome back!" : "Authentication Status"}
+                            </CardTitle>
+                            <CardDescription>
+                                {user 
+                                    ? `Logged in as ${user.email}`
+                                    : "You are not currently logged in"
+                                }
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                            {user ? (
+                                <div className="space-y-3">
+                                    <Button asChild className="w-full">
+                                        <Link href="/protected">
+                                            <Lock className="mr-2 h-4 w-4" />
+                                            Go to Protected Area
+                                        </Link>
+                                    </Button>
+                                    <p className="text-xs text-center text-muted-foreground">
+                                        You have access to protected content
+                                    </p>
+                                </div>
+                            ) : (
+                                <div className="space-y-3">
+                                    <Button asChild className="w-full">
+                                        <Link href="/auth/login">
+                                            Sign In
+                                        </Link>
+                                    </Button>
+                                    <Button asChild variant="outline" className="w-full">
+                                        <Link href="/auth/sign-up">
+                                            Create Account
+                                        </Link>
+                                    </Button>
+                                    <p className="text-xs text-center text-muted-foreground">
+                                        Sign in to access protected content
+                                    </p>
+                                </div>
+                            )}
+                        </CardContent>
+                    </Card>
+                </div>
+
+                {/* Features */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2">
+                                <Shield className="h-5 w-5" />
+                                Secure Authentication
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-sm text-muted-foreground">
+                                Powered by Supabase Auth with email/password authentication and secure session management.
+                            </p>
+                        </CardContent>
+                    </Card>
+
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2">
+                                <Lock className="h-5 w-5" />
+                                Protected Routes
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-sm text-muted-foreground">
+                                Server-side route protection that automatically redirects unauthenticated users to login.
+                            </p>
+                        </CardContent>
+                    </Card>
+
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-2">
+                                <User className="h-5 w-5" />
+                                User Management
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-sm text-muted-foreground">
+                                Complete user signup, login, logout, and password reset functionality.
+                            </p>
+                        </CardContent>
+                    </Card>
+                </div>
+
+                {/* Quick Navigation */}
+                <div className="text-center space-y-4">
+                    <h3 className="text-lg font-semibold">Quick Navigation</h3>
+                    <div className="flex justify-center gap-4 flex-wrap">
+                        <Button variant="outline" size="sm" asChild>
+                            <Link href="/auth/login">Login Page</Link>
+                        </Button>
+                        <Button variant="outline" size="sm" asChild>
+                            <Link href="/auth/sign-up">Sign Up Page</Link>
+                        </Button>
+                        <Button variant="outline" size="sm" asChild>
+                            <Link href="/protected">Protected Page</Link>
+                        </Button>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
