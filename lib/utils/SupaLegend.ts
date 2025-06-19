@@ -12,8 +12,6 @@ configureSyncedSupabase({
     generateId,
 })
 
-const uid = ''
-
 export const todos$ = observable(
   syncedSupabase({
     supabase,
