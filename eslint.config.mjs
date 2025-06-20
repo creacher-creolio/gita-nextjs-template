@@ -155,7 +155,7 @@ export default defineConfig([
         },
     },
     {
-        files: ["**/components/ui/**/*.{js,ts,jsx,tsx}"],
+        files: ["**/components/ui/**/*.{js,ts,jsx,tsx}", "**/types/supabase.ts"],
         rules: {
             "@typescript-eslint/naming-convention": "off",
             "@typescript-eslint/no-explicit-any": "off",
