@@ -1,8 +1,8 @@
+import { InfoIcon } from "lucide-react";
+import Link from "next/dist/client/link";
 import { redirect } from "next/navigation";
 
 import { createClient } from "@/lib/supabase/server";
-import { InfoIcon } from "lucide-react";
-import Link from "next/dist/client/link";
 
 export default async function ProtectedPage() {
     const supabase = await createClient();

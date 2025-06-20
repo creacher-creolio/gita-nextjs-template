@@ -1,22 +1,20 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { createClient } from "@/lib/supabase/client";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { Eye, EyeOff } from "lucide-react";
+import { createClient } from "@/lib/supabase/client";
+import { cn } from "@/lib/utils";
 
 export function SignUpForm({ className, ...props }: React.ComponentPropsWithoutRef<"div">) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [repeatPassword, setRepeatPassword] = useState("");
-    const [showPassword, setShowPassword] = useState(false);
-    const [showRepeatPassword, setShowRepeatPassword] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(false);
     const router = useRouter();
@@ -75,49 +73,25 @@ export function SignUpForm({ className, ...props }: React.ComponentPropsWithoutR
                                 <div className="flex items-center">
                                     <Label htmlFor="password">Password</Label>
                                 </div>
-                                <div className="relative">
-                                    <Input
-                                        id="password"
-                                        type={showPassword ? "text" : "password"}
-                                        required
-                                        value={password}
-                                        onChange={e => setPassword(e.target.value)}
-                                    />
-                                    <button
-                                        type="button"
-                                        className="absolute inset-y-0 right-0 flex items-center pr-3"
-                                        onClick={() => setShowPassword(!showPassword)}>
-                                        {showPassword ? (
-                                            <EyeOff className="h-4 w-4 text-gray-400" />
-                                        ) : (
-                                            <Eye className="h-4 w-4 text-gray-400" />
-                                        )}
-                                    </button>
-                                </div>
+                                <Input
+                                    id="password"
+                                    type="password"
+                                    required
+                                    value={password}
+                                    onChange={e => setPassword(e.target.value)}
+                                />
                             </div>
                             <div className="grid gap-2">
                                 <div className="flex items-center">
                                     <Label htmlFor="repeat-password">Repeat Password</Label>
                                 </div>
-                                <div className="relative">
-                                    <Input
-                                        id="repeat-password"
-                                        type={showRepeatPassword ? "text" : "password"}
-                                        required
-                                        value={repeatPassword}
-                                        onChange={e => setRepeatPassword(e.target.value)}
-                                    />
-                                    <button
-                                        type="button"
-                                        className="absolute inset-y-0 right-0 flex items-center pr-3"
-                                        onClick={() => setShowRepeatPassword(!showRepeatPassword)}>
-                                        {showRepeatPassword ? (
-                                            <EyeOff className="h-4 w-4 text-gray-400" />
-                                        ) : (
-                                            <Eye className="h-4 w-4 text-gray-400" />
-                                        )}
-                                    </button>
-                                </div>
+                                <Input
+                                    id="repeat-password"
+                                    type="password"
+                                    required
+                                    value={repeatPassword}
+                                    onChange={e => setRepeatPassword(e.target.value)}
+                                />
                             </div>
                             {error && <p className="text-sm text-red-500">{error}</p>}
                             <Button type="submit" className="w-full" disabled={isLoading}>
