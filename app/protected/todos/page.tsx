@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { observer, use$ } from "@legendapp/state/react";
-import { addTodo, todos$ as _todos$, toggleDone, clearAllTodos, deleteTodo } from "@/lib/utils/SupaLegend";
-import { Tables } from "@/lib/types/supabase";
 import { CheckSquare, Plus, X } from "lucide-react";
+import { useState } from "react";
+
+import { Tables } from "@/lib/types/supabase";
+import { addTodo, todos$ as _todos$, toggleDone, clearAllTodos, deleteTodo } from "@/lib/utils/SupaLegend";
 
 // Emojis to decorate each todo.
 const NOT_DONE_ICON = String.fromCodePoint(0x1f7e0);
