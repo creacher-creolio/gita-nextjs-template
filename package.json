@@ -10,7 +10,7 @@
         "lint": "next lint --fix",
         "format": "prettier --write \"**/*.{css,scss,ts,tsx,js,jsx,json,mjs}\"",
         "polish": "next lint --fix && prettier --write \"**/*.{css,scss,ts,tsx,js,jsx,json,mjs}\"",
-        "hollow-out": "powershell -Command \"Remove-Item -Path .expo, .next, node_modules, package-lock.json, pnpm-lock.yaml -Force -Recurse\""
+        "gut": "powershell -Command \"Remove-Item -Path .expo, .next, node_modules, package-lock.json, pnpm-lock.yaml -Force -Recurse\""
     },
     "dependencies": {
         "@hookform/resolvers": "^5.1.1",
