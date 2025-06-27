@@ -10,10 +10,11 @@
         "lint": "next lint --fix",
         "format": "prettier --write \"**/*.{css,scss,ts,tsx,js,jsx,json,mjs}\"",
         "polish": "next lint --fix && prettier --write \"**/*.{css,scss,ts,tsx,js,jsx,json,mjs}\"",
-        "hollow-out": "powershell -Command \"Remove-Item -Path .expo, .next, node_modules, package-lock.json, pnpm-lock.yaml -Force -Recurse\""
+        "gut": "powershell -Command \"Remove-Item -Path .expo, .next, node_modules, package-lock.json, pnpm-lock.yaml -Force -Recurse\""
     },
     "dependencies": {
         "@hookform/resolvers": "^5.1.1",
+        "@legendapp/state": "3.0.0-beta.31",
         "@radix-ui/react-accordion": "^1.2.11",
         "@radix-ui/react-alert-dialog": "^1.1.14",
         "@radix-ui/react-aspect-ratio": "^1.1.7",
@@ -58,6 +59,7 @@
         "recharts": "^2.15.3",
         "sonner": "^2.0.5",
         "tailwind-merge": "^3.3.1",
+        "uuid": "^11.1.0",
         "vaul": "^1.1.2",
         "zod": "^3.25.67"
     },

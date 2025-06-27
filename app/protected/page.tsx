@@ -1,4 +1,5 @@
 import { InfoIcon } from "lucide-react";
+import Link from "next/dist/client/link";
 import { redirect } from "next/navigation";
 
 import { createClient } from "@/lib/supabase/server";
@@ -53,6 +54,28 @@ export default async function ProtectedPage() {
                     <pre className="bg-muted max-h-32 w-full overflow-auto rounded border p-3 font-mono text-xs">
                         {JSON.stringify(data.user, null, 2)}
                     </pre>
+                </div>
+                <div className="rounded-lg border border-blue-200 bg-gradient-to-r from-blue-50 to-indigo-50 p-6 dark:border-blue-800 dark:from-blue-950 dark:to-indigo-950">
+                    <div className="flex flex-col gap-4">
+                        <div className="flex items-center gap-3">
+                            <div className="h-2 w-2 animate-pulse rounded-full bg-green-500"></div>
+                            <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100">
+                                Local-First Todo App
+                            </h3>
+                        </div>
+                        <p className="text-sm leading-relaxed text-blue-700 dark:text-blue-300">
+                            Experience real-time synchronization with Legend-State and Supabase. Work offline and sync
+                            seamlessly when back online.
+                        </p>
+                        <Link
+                            href="/protected/todos"
+                            className="inline-flex w-fit items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-medium text-white shadow-md transition-colors duration-200 hover:bg-blue-700 hover:shadow-lg">
+                            <span>Open Todo App</span>
+                            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
