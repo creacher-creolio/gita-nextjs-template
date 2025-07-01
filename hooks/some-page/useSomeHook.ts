@@ -1,6 +1,6 @@
 "use client";
 
-export function SomeHook() {
+export function useSomeHook() {
     return {
         someData: "some data",
     };

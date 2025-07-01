@@ -1,9 +1,9 @@
 "use client";
 
-import { SomeHook } from "@/hooks/some-page/some-hook";
+import { useSomeHook } from "@/hooks/some-page/useSomeHook";
 
 export default function SomeComponent() {
-    const { someData } = SomeHook();
+    const { someData } = useSomeHook();
 
     return <div className="">{someData}</div>;
 }
