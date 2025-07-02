@@ -1,6 +1,6 @@
 "use client";
 
-import SomeComponent from "@/components/some-page/some-component";
+import SomeComponent from "@/components/some-page/SomeComponent";
 
 export default function SomePage() {
     return (
