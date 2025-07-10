@@ -1,0 +1,103 @@
+{
+    "metadata": {
+        "title": "Créer App Next",
+        "description": "Généré par create next app"
+    },
+    "home": {
+        "title": "Démarreur Next.js Supabase",
+        "subtitle": "Un système d'authentification complet avec connexion, déconnexion et routes protégées alimenté par Supabase et Next.js",
+        "authStatus": {
+            "welcomeBack": "Bon retour !",
+            "authStatus": "Statut d'Authentification",
+            "loggedInAs": "Connecté en tant que {email}",
+            "notLoggedIn": "Vous n'êtes pas actuellement connecté",
+            "goToProtected": "Aller à la Zone Protégée",
+            "hasAccess": "Vous avez accès au contenu protégé",
+            "signIn": "Se Connecter",
+            "createAccount": "Créer un Compte",
+            "signInToAccess": "Connectez-vous pour accéder au contenu protégé"
+        },
+        "features": {
+            "secureAuth": {
+                "title": "Authentification Sécurisée",
+                "description": "Alimenté par Supabase Auth avec authentification email/mot de passe et gestion sécurisée des sessions."
+            },
+            "protectedRoutes": {
+                "title": "Routes Protégées",
+                "description": "Protection des routes côté serveur qui redirige automatiquement les utilisateurs non authentifiés vers la connexion."
+            },
+            "userManagement": {
+                "title": "Gestion des Utilisateurs",
+                "description": "Fonctionnalité complète d'inscription, connexion, déconnexion et réinitialisation de mot de passe."
+            }
+        },
+        "quickNav": {
+            "title": "Navigation Rapide",
+            "loginPage": "Page de Connexion",
+            "signUpPage": "Page d'Inscription",
+            "protectedPage": "Page Protégée"
+        }
+    },
+    "auth": {
+        "login": {
+            "title": "Se Connecter",
+            "email": "Email",
+            "password": "Mot de passe",
+            "signIn": "Se Connecter",
+            "noAccount": "Vous n'avez pas de compte ?",
+            "signUp": "S'inscrire",
+            "forgotPassword": "Mot de passe oublié ?"
+        },
+        "signUp": {
+            "title": "Créer un Compte",
+            "email": "Email",
+            "password": "Mot de passe",
+            "confirmPassword": "Confirmer le Mot de passe",
+            "createAccount": "Créer un Compte",
+            "hasAccount": "Vous avez déjà un compte ?",
+            "signIn": "Se Connecter"
+        },
+        "forgotPassword": {
+            "title": "Réinitialiser le Mot de passe",
+            "email": "Email",
+            "resetPassword": "Réinitialiser le Mot de passe",
+            "backToLogin": "Retour à la Connexion"
+        },
+        "updatePassword": {
+            "title": "Mettre à jour le Mot de passe",
+            "newPassword": "Nouveau Mot de passe",
+            "confirmPassword": "Confirmer le Mot de passe",
+            "updatePassword": "Mettre à jour le Mot de passe"
+        }
+    },
+    "protected": {
+        "title": "Bienvenue sur votre tableau de bord !",
+        "description": "Vous êtes connecté avec succès et pouvez accéder au contenu protégé.",
+        "protectedInfo": "Ceci est une page protégée que vous ne pouvez voir qu'en tant qu'utilisateur authentifié",
+        "userDetails": {
+            "title": "Vos détails d'utilisateur",
+            "email": "Email",
+            "userId": "ID Utilisateur",
+            "lastSignIn": "Dernière connexion"
+        },
+        "rawData": "Données utilisateur brutes",
+        "todoApp": {
+            "title": "App de Tâches Local-First",
+            "description": "Découvrez la synchronisation en temps réel avec Legend-State et Supabase. Travaillez hors ligne et synchronisez sans problème lors du retour en ligne.",
+            "openApp": "Ouvrir l'App de Tâches"
+        }
+    },
+    "common": {
+        "loading": "Chargement...",
+        "error": "Erreur",
+        "success": "Succès",
+        "cancel": "Annuler",
+        "confirm": "Confirmer",
+        "back": "Retour",
+        "next": "Suivant",
+        "submit": "Soumettre",
+        "save": "Sauvegarder",
+        "delete": "Supprimer",
+        "edit": "Modifier"
+    }
+}

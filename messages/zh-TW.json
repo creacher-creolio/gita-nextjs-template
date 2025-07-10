@@ -1,0 +1,103 @@
+{
+    "metadata": {
+        "title": "建立 Next App",
+        "description": "由 create next app 生成"
+    },
+    "home": {
+        "title": "Next.js Supabase 初始模板",
+        "subtitle": "由 Supabase 和 Next.js 驅動的完整認證系統，包含登入、登出和受保護的路由",
+        "authStatus": {
+            "welcomeBack": "歡迎回來！",
+            "authStatus": "認證狀態",
+            "loggedInAs": "已登入為 {email}",
+            "notLoggedIn": "您目前尚未登入",
+            "goToProtected": "前往受保護區域",
+            "hasAccess": "您可以存取受保護的內容",
+            "signIn": "登入",
+            "createAccount": "建立帳戶",
+            "signInToAccess": "登入以存取受保護的內容"
+        },
+        "features": {
+            "secureAuth": {
+                "title": "安全認證",
+                "description": "由 Supabase Auth 驅動，具有電子郵件/密碼認證和安全工作階段管理。"
+            },
+            "protectedRoutes": {
+                "title": "受保護路由",
+                "description": "伺服器端路由保護，自動將未認證的使用者重新導向至登入頁面。"
+            },
+            "userManagement": {
+                "title": "使用者管理",
+                "description": "完整的使用者註冊、登入、登出和密碼重設功能。"
+            }
+        },
+        "quickNav": {
+            "title": "快速導航",
+            "loginPage": "登入頁面",
+            "signUpPage": "註冊頁面",
+            "protectedPage": "受保護頁面"
+        }
+    },
+    "auth": {
+        "login": {
+            "title": "登入",
+            "email": "電子郵件",
+            "password": "密碼",
+            "signIn": "登入",
+            "noAccount": "還沒有帳戶？",
+            "signUp": "註冊",
+            "forgotPassword": "忘記密碼？"
+        },
+        "signUp": {
+            "title": "建立帳戶",
+            "email": "電子郵件",
+            "password": "密碼",
+            "confirmPassword": "確認密碼",
+            "createAccount": "建立帳戶",
+            "hasAccount": "已經有帳戶？",
+            "signIn": "登入"
+        },
+        "forgotPassword": {
+            "title": "重設密碼",
+            "email": "電子郵件",
+            "resetPassword": "重設密碼",
+            "backToLogin": "返回登入"
+        },
+        "updatePassword": {
+            "title": "更新密碼",
+            "newPassword": "新密碼",
+            "confirmPassword": "確認密碼",
+            "updatePassword": "更新密碼"
+        }
+    },
+    "protected": {
+        "title": "歡迎來到您的儀表板！",
+        "description": "您已成功登入，可以存取受保護的內容。",
+        "protectedInfo": "這是一個受保護的頁面，只有經過認證的使用者才能查看",
+        "userDetails": {
+            "title": "您的使用者詳細資料",
+            "email": "電子郵件",
+            "userId": "使用者 ID",
+            "lastSignIn": "上次登入"
+        },
+        "rawData": "原始使用者資料",
+        "todoApp": {
+            "title": "本地優先待辦事項應用程式",
+            "description": "體驗 Legend-State 和 Supabase 的即時同步功能。離線工作，重新連線時無縫同步。",
+            "openApp": "開啟待辦事項應用程式"
+        }
+    },
+    "common": {
+        "loading": "載入中...",
+        "error": "錯誤",
+        "success": "成功",
+        "cancel": "取消",
+        "confirm": "確認",
+        "back": "返回",
+        "next": "下一步",
+        "submit": "提交",
+        "save": "儲存",
+        "delete": "刪除",
+        "edit": "編輯"
+    }
+}

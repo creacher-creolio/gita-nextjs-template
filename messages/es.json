@@ -1,0 +1,103 @@
+{
+    "metadata": {
+        "title": "Crear App Next",
+        "description": "Generado por create next app"
+    },
+    "home": {
+        "title": "Iniciador Next.js Supabase",
+        "subtitle": "Un sistema completo de autenticación con inicio de sesión, cierre de sesión y rutas protegidas impulsado por Supabase y Next.js",
+        "authStatus": {
+            "welcomeBack": "¡Bienvenido de vuelta!",
+            "authStatus": "Estado de Autenticación",
+            "loggedInAs": "Conectado como {email}",
+            "notLoggedIn": "Actualmente no estás conectado",
+            "goToProtected": "Ir al Área Protegida",
+            "hasAccess": "Tienes acceso a contenido protegido",
+            "signIn": "Iniciar Sesión",
+            "createAccount": "Crear Cuenta",
+            "signInToAccess": "Inicia sesión para acceder a contenido protegido"
+        },
+        "features": {
+            "secureAuth": {
+                "title": "Autenticación Segura",
+                "description": "Impulsado por Supabase Auth con autenticación de email/contraseña y gestión segura de sesiones."
+            },
+            "protectedRoutes": {
+                "title": "Rutas Protegidas",
+                "description": "Protección de rutas del lado del servidor que redirige automáticamente a usuarios no autenticados al login."
+            },
+            "userManagement": {
+                "title": "Gestión de Usuarios",
+                "description": "Funcionalidad completa de registro, inicio de sesión, cierre de sesión y restablecimiento de contraseña."
+            }
+        },
+        "quickNav": {
+            "title": "Navegación Rápida",
+            "loginPage": "Página de Login",
+            "signUpPage": "Página de Registro",
+            "protectedPage": "Página Protegida"
+        }
+    },
+    "auth": {
+        "login": {
+            "title": "Iniciar Sesión",
+            "email": "Email",
+            "password": "Contraseña",
+            "signIn": "Iniciar Sesión",
+            "noAccount": "¿No tienes una cuenta?",
+            "signUp": "Registrarse",
+            "forgotPassword": "¿Olvidaste tu contraseña?"
+        },
+        "signUp": {
+            "title": "Crear Cuenta",
+            "email": "Email",
+            "password": "Contraseña",
+            "confirmPassword": "Confirmar Contraseña",
+            "createAccount": "Crear Cuenta",
+            "hasAccount": "¿Ya tienes una cuenta?",
+            "signIn": "Iniciar Sesión"
+        },
+        "forgotPassword": {
+            "title": "Restablecer Contraseña",
+            "email": "Email",
+            "resetPassword": "Restablecer Contraseña",
+            "backToLogin": "Volver al Login"
+        },
+        "updatePassword": {
+            "title": "Actualizar Contraseña",
+            "newPassword": "Nueva Contraseña",
+            "confirmPassword": "Confirmar Contraseña",
+            "updatePassword": "Actualizar Contraseña"
+        }
+    },
+    "protected": {
+        "title": "¡Bienvenido a tu panel de control!",
+        "description": "Has iniciado sesión exitosamente y puedes acceder a contenido protegido.",
+        "protectedInfo": "Esta es una página protegida que solo puedes ver como usuario autenticado",
+        "userDetails": {
+            "title": "Tus detalles de usuario",
+            "email": "Email",
+            "userId": "ID de Usuario",
+            "lastSignIn": "Último inicio de sesión"
+        },
+        "rawData": "Datos de usuario sin procesar",
+        "todoApp": {
+            "title": "App de Tareas Local-First",
+            "description": "Experimenta la sincronización en tiempo real con Legend-State y Supabase. Trabaja sin conexión y sincroniza sin problemas cuando vuelvas en línea.",
+            "openApp": "Abrir App de Tareas"
+        }
+    },
+    "common": {
+        "loading": "Cargando...",
+        "error": "Error",
+        "success": "Éxito",
+        "cancel": "Cancelar",
+        "confirm": "Confirmar",
+        "back": "Atrás",
+        "next": "Siguiente",
+        "submit": "Enviar",
+        "save": "Guardar",
+        "delete": "Eliminar",
+        "edit": "Editar"
+    }
+}
