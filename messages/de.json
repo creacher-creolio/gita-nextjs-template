@@ -1,0 +1,103 @@
+{
+    "metadata": {
+        "title": "Next App Erstellen",
+        "description": "Generiert von create next app"
+    },
+    "home": {
+        "title": "Next.js Supabase Starter",
+        "subtitle": "Ein vollständiges Authentifizierungssystem mit Anmeldung, Abmeldung und geschützten Routen, betrieben von Supabase und Next.js",
+        "authStatus": {
+            "welcomeBack": "Willkommen zurück!",
+            "authStatus": "Authentifizierungsstatus",
+            "loggedInAs": "Angemeldet als {email}",
+            "notLoggedIn": "Sie sind derzeit nicht angemeldet",
+            "goToProtected": "Zum Geschützten Bereich",
+            "hasAccess": "Sie haben Zugang zu geschützten Inhalten",
+            "signIn": "Anmelden",
+            "createAccount": "Konto Erstellen",
+            "signInToAccess": "Melden Sie sich an, um auf geschützte Inhalte zuzugreifen"
+        },
+        "features": {
+            "secureAuth": {
+                "title": "Sichere Authentifizierung",
+                "description": "Betrieben von Supabase Auth mit E-Mail/Passwort-Authentifizierung und sicherer Sitzungsverwaltung."
+            },
+            "protectedRoutes": {
+                "title": "Geschützte Routen",
+                "description": "Serverseitiger Routenschutz, der nicht authentifizierte Benutzer automatisch zur Anmeldung weiterleitet."
+            },
+            "userManagement": {
+                "title": "Benutzerverwaltung",
+                "description": "Vollständige Benutzerregistrierung, Anmeldung, Abmeldung und Passwort-Reset-Funktionalität."
+            }
+        },
+        "quickNav": {
+            "title": "Schnelle Navigation",
+            "loginPage": "Anmeldeseite",
+            "signUpPage": "Registrierungsseite",
+            "protectedPage": "Geschützte Seite"
+        }
+    },
+    "auth": {
+        "login": {
+            "title": "Anmelden",
+            "email": "E-Mail",
+            "password": "Passwort",
+            "signIn": "Anmelden",
+            "noAccount": "Haben Sie kein Konto?",
+            "signUp": "Registrieren",
+            "forgotPassword": "Passwort vergessen?"
+        },
+        "signUp": {
+            "title": "Konto Erstellen",
+            "email": "E-Mail",
+            "password": "Passwort",
+            "confirmPassword": "Passwort Bestätigen",
+            "createAccount": "Konto Erstellen",
+            "hasAccount": "Haben Sie bereits ein Konto?",
+            "signIn": "Anmelden"
+        },
+        "forgotPassword": {
+            "title": "Passwort Zurücksetzen",
+            "email": "E-Mail",
+            "resetPassword": "Passwort Zurücksetzen",
+            "backToLogin": "Zurück zur Anmeldung"
+        },
+        "updatePassword": {
+            "title": "Passwort Aktualisieren",
+            "newPassword": "Neues Passwort",
+            "confirmPassword": "Passwort Bestätigen",
+            "updatePassword": "Passwort Aktualisieren"
+        }
+    },
+    "protected": {
+        "title": "Willkommen zu Ihrem Dashboard!",
+        "description": "Sie sind erfolgreich angemeldet und können auf geschützte Inhalte zugreifen.",
+        "protectedInfo": "Dies ist eine geschützte Seite, die Sie nur als authentifizierter Benutzer sehen können",
+        "userDetails": {
+            "title": "Ihre Benutzerdetails",
+            "email": "E-Mail",
+            "userId": "Benutzer-ID",
+            "lastSignIn": "Letzte Anmeldung"
+        },
+        "rawData": "Rohe Benutzerdaten",
+        "todoApp": {
+            "title": "Local-First Todo App",
+            "description": "Erleben Sie Echtzeit-Synchronisation mit Legend-State und Supabase. Arbeiten Sie offline und synchronisieren Sie nahtlos, wenn Sie wieder online sind.",
+            "openApp": "Todo App Öffnen"
+        }
+    },
+    "common": {
+        "loading": "Laden...",
+        "error": "Fehler",
+        "success": "Erfolg",
+        "cancel": "Abbrechen",
+        "confirm": "Bestätigen",
+        "back": "Zurück",
+        "next": "Weiter",
+        "submit": "Senden",
+        "save": "Speichern",
+        "delete": "Löschen",
+        "edit": "Bearbeiten"
+    }
+}
