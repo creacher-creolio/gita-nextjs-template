@@ -1,6 +1,8 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
+import { localeUtils } from "@/i18n/locales";
+
 export async function updateSession(request: NextRequest) {
     let supabaseResponse = NextResponse.next({
         request,
@@ -37,15 +39,27 @@ export async function updateSession(request: NextRequest) {
         data: { user },
     } = await supabase.auth.getUser();
 
-    if (
-        request.nextUrl.pathname !== "/" &&
-        !user &&
-        !request.nextUrl.pathname.startsWith("/login") &&
-        !request.nextUrl.pathname.startsWith("/auth")
-    ) {
+    // Extract locale from pathname for locale-aware redirects
+    const pathSegments = request.nextUrl.pathname.split("/");
+    const hasLocale = pathSegments[1] && localeUtils.isSupported(pathSegments[1]);
+    const locale = hasLocale ? pathSegments[1] : localeUtils.getDefault();
+    const pathWithoutLocale = hasLocale ? "/" + pathSegments.slice(2).join("/") : request.nextUrl.pathname;
+
+    // Clean up the path (remove trailing slashes, handle empty paths)
+    const cleanPath = pathWithoutLocale === "/" || pathWithoutLocale === "" ? "/" : pathWithoutLocale;
+
+    // Only redirect to login if:
+    // 1. User is not authenticated
+    // 2. Path is protected (not root, not auth pages)
+    // 3. Not already on an auth page
+    const isRootPath = cleanPath === "/";
+    const isAuthPath = cleanPath.startsWith("/auth") || cleanPath.startsWith("/login");
+    const isProtectedPath = !isRootPath && !isAuthPath;
+
+    if (!user && isProtectedPath) {
         // no user, potentially respond by redirecting the user to the login page
         const url = request.nextUrl.clone();
-        url.pathname = "/auth/login";
+        url.pathname = `/${locale}/auth/login`;
         return NextResponse.redirect(url);
     }
 

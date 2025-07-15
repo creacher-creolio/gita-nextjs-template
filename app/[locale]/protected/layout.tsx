@@ -3,7 +3,12 @@ import { redirect } from "next/navigation";
 
 import { createClient } from "@/lib/supabase/server";
 
-export default async function ProtectedLayout({ children }: { children: React.ReactNode }) {
+interface ProtectedLayoutProps {
+    children: React.ReactNode;
+    params: { locale: string };
+}
+
+export default async function ProtectedLayout({ children, params }: ProtectedLayoutProps) {
     const supabase = await createClient();
 
     const {
@@ -11,7 +16,7 @@ export default async function ProtectedLayout({ children }: { children: React.Re
     } = await supabase.auth.getUser();
 
     if (!user) {
-        return redirect("/auth/login");
+        redirect(`/${params.locale}/auth/login`);
     }
 
     return <div className="flex min-h-screen w-full flex-col">{children}</div>;

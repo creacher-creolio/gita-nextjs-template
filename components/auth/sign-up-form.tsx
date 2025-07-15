@@ -1,14 +1,14 @@
 "use client";
 
 import { Eye, EyeOff } from "lucide-react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Link, useRouter } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { cn } from "@/lib/utils";
 
@@ -21,6 +21,8 @@ export function SignUpForm({ className, ...props }: React.ComponentPropsWithoutR
     const [error, setError] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(false);
     const router = useRouter();
+    const locale = useLocale();
+    const t = useTranslations("auth.signUp");
 
     const handleSignUp = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -29,7 +31,7 @@ export function SignUpForm({ className, ...props }: React.ComponentPropsWithoutR
         setError(null);
 
         if (password !== repeatPassword) {
-            setError("Passwords do not match");
+            setError(t("passwordMismatch"));
             setIsLoading(false);
             return;
         }
@@ -39,13 +41,13 @@ export function SignUpForm({ className, ...props }: React.ComponentPropsWithoutR
                 email,
                 password,
                 options: {
-                    emailRedirectTo: `${window.location.origin}/protected`,
+                    emailRedirectTo: `${window.location.origin}/${locale}/protected`,
                 },
             });
             if (error) throw error;
             router.push("/auth/sign-up-success");
         } catch (error: unknown) {
-            setError(error instanceof Error ? error.message : "An error occurred");
+            setError(error instanceof Error ? error.message : t("genericError"));
         } finally {
             setIsLoading(false);
         }
@@ -55,14 +57,14 @@ export function SignUpForm({ className, ...props }: React.ComponentPropsWithoutR
         <div className={cn("flex flex-col gap-6", className)} {...props}>
             <Card>
                 <CardHeader>
-                    <CardTitle className="text-2xl">Sign up</CardTitle>
-                    <CardDescription>Create a new account</CardDescription>
+                    <CardTitle className="text-2xl">{t("title")}</CardTitle>
+                    <CardDescription>{t("description")}</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <form onSubmit={handleSignUp}>
                         <div className="flex flex-col gap-6">
                             <div className="grid gap-2">
-                                <Label htmlFor="email">Email</Label>
+                                <Label htmlFor="email">{t("email")}</Label>
                                 <Input
                                     id="email"
                                     type="email"
@@ -74,7 +76,7 @@ export function SignUpForm({ className, ...props }: React.ComponentPropsWithoutR
                             </div>
                             <div className="grid gap-2">
                                 <div className="flex items-center">
-                                    <Label htmlFor="password">Password</Label>
+                                    <Label htmlFor="password">{t("password")}</Label>
                                 </div>
                                 <div className="relative">
                                     <Input
@@ -89,14 +91,14 @@ export function SignUpForm({ className, ...props }: React.ComponentPropsWithoutR
                                         type="button"
                                         onClick={() => setShowPassword(!showPassword)}
                                         className="absolute top-1/2 right-3 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-                                        aria-label={showPassword ? "Hide password" : "Show password"}>
+                                        aria-label={showPassword ? t("hidePassword") : t("showPassword")}>
                                         {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                                     </button>
                                 </div>
                             </div>
                             <div className="grid gap-2">
                                 <div className="flex items-center">
-                                    <Label htmlFor="repeat-password">Repeat Password</Label>
+                                    <Label htmlFor="repeat-password">{t("repeatPassword")}</Label>
                                 </div>
                                 <div className="relative">
                                     <Input
@@ -112,7 +114,7 @@ export function SignUpForm({ className, ...props }: React.ComponentPropsWithoutR
                                         onClick={() => setShowRepeatPassword(!showRepeatPassword)}
                                         className="absolute top-1/2 right-3 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                                         aria-label={
-                                            showRepeatPassword ? "Hide repeat password" : "Show repeat password"
+                                            showRepeatPassword ? t("hideRepeatPassword") : t("showRepeatPassword")
                                         }>
                                         {showRepeatPassword ? (
                                             <EyeOff className="h-4 w-4" />
@@ -124,13 +126,13 @@ export function SignUpForm({ className, ...props }: React.ComponentPropsWithoutR
                             </div>
                             {error && <p className="text-sm text-red-500">{error}</p>}
                             <Button type="submit" className="w-full" disabled={isLoading}>
-                                {isLoading ? "Creating an account..." : "Sign up"}
+                                {isLoading ? t("creating") : t("signUp")}
                             </Button>
                         </div>
                         <div className="mt-4 text-center text-sm">
-                            Already have an account?{" "}
+                            {t("alreadyHaveAccount")}{" "}
                             <Link href="/auth/login" className="underline underline-offset-4">
-                                Login
+                                {t("login")}
                             </Link>
                         </div>
                     </form>
