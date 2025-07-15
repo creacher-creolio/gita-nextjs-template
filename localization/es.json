@@ -49,19 +49,38 @@
             "forgotPassword": "¿Olvidaste tu contraseña?"
         },
         "signUp": {
-            "title": "Crear Cuenta",
+            "title": "Registrarse",
+            "description": "Crear una nueva cuenta",
             "email": "Email",
             "password": "Contraseña",
+            "repeatPassword": "Repetir Contraseña",
+            "signUp": "Registrarse",
+            "creating": "Creando una cuenta...",
+            "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+            "login": "Iniciar Sesión",
+            "passwordMismatch": "Las contraseñas no coinciden",
+            "genericError": "Ocurrió un error",
+            "showPassword": "Mostrar contraseña",
+            "hidePassword": "Ocultar contraseña",
+            "showRepeatPassword": "Mostrar repetir contraseña",
+            "hideRepeatPassword": "Ocultar repetir contraseña",
             "confirmPassword": "Confirmar Contraseña",
             "createAccount": "Crear Cuenta",
             "hasAccount": "¿Ya tienes una cuenta?",
             "signIn": "Iniciar Sesión"
         },
         "forgotPassword": {
-            "title": "Restablecer Contraseña",
+            "title": "Restablecer tu contraseña",
+            "description": "Ingresa tu email y te enviaremos un enlace para restablecer tu contraseña",
             "email": "Email",
-            "resetPassword": "Restablecer Contraseña",
-            "backToLogin": "Volver al Login"
+            "resetPassword": "Enviar email de restablecimiento",
+            "sending": "Enviando...",
+            "backToLogin": "¿Ya tienes una cuenta?",
+            "login": "Iniciar Sesión",
+            "genericError": "Ocurrió un error",
+            "checkEmail": "Revisa tu Email",
+            "instructionsSent": "Instrucciones de restablecimiento de contraseña enviadas",
+            "emailDescription": "Si te registraste usando tu email y contraseña, recibirás un email para restablecer la contraseña."
         },
         "updatePassword": {
             "title": "Actualizar Contraseña",

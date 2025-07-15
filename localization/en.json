@@ -49,19 +49,38 @@
             "forgotPassword": "Forgot your password?"
         },
         "signUp": {
-            "title": "Create Account",
+            "title": "Sign Up",
+            "description": "Create a new account",
             "email": "Email",
             "password": "Password",
+            "repeatPassword": "Repeat Password",
+            "signUp": "Sign Up",
+            "creating": "Creating an account...",
+            "alreadyHaveAccount": "Already have an account?",
+            "login": "Login",
+            "passwordMismatch": "Passwords do not match",
+            "genericError": "An error occurred",
+            "showPassword": "Show password",
+            "hidePassword": "Hide password",
+            "showRepeatPassword": "Show repeat password",
+            "hideRepeatPassword": "Hide repeat password",
             "confirmPassword": "Confirm Password",
             "createAccount": "Create Account",
             "hasAccount": "Already have an account?",
             "signIn": "Sign In"
         },
         "forgotPassword": {
-            "title": "Reset Password",
+            "title": "Reset Your Password",
+            "description": "Type in your email and we'll send you a link to reset your password",
             "email": "Email",
-            "resetPassword": "Reset Password",
-            "backToLogin": "Back to Login"
+            "resetPassword": "Send reset email",
+            "sending": "Sending...",
+            "backToLogin": "Already have an account?",
+            "login": "Login",
+            "genericError": "An error occurred",
+            "checkEmail": "Check Your Email",
+            "instructionsSent": "Password reset instructions sent",
+            "emailDescription": "If you registered using your email and password, you will receive a password reset email."
         },
         "updatePassword": {
             "title": "Update Password",

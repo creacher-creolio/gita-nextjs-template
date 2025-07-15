@@ -49,19 +49,38 @@
             "forgotPassword": "Забыли пароль?"
         },
         "signUp": {
-            "title": "Создать аккаунт",
+            "title": "Зарегистрироваться",
+            "description": "Создать новый аккаунт",
             "email": "Email",
             "password": "Пароль",
+            "repeatPassword": "Повторить пароль",
+            "signUp": "Зарегистрироваться",
+            "creating": "Создание аккаунта...",
+            "alreadyHaveAccount": "Уже есть аккаунт?",
+            "login": "Войти",
+            "passwordMismatch": "Пароли не совпадают",
+            "genericError": "Произошла ошибка",
+            "showPassword": "Показать пароль",
+            "hidePassword": "Скрыть пароль",
+            "showRepeatPassword": "Показать повтор пароля",
+            "hideRepeatPassword": "Скрыть повтор пароля",
             "confirmPassword": "Подтвердить пароль",
             "createAccount": "Создать аккаунт",
             "hasAccount": "Уже есть аккаунт?",
             "signIn": "Войти"
         },
         "forgotPassword": {
-            "title": "Сбросить пароль",
+            "title": "Сбросить ваш пароль",
+            "description": "Введите ваш email и мы отправим вам ссылку для сброса пароля",
             "email": "Email",
-            "resetPassword": "Сбросить пароль",
-            "backToLogin": "Вернуться к входу"
+            "resetPassword": "Отправить email для сброса",
+            "sending": "Отправка...",
+            "backToLogin": "Уже есть аккаунт?",
+            "login": "Войти",
+            "genericError": "Произошла ошибка",
+            "checkEmail": "Проверьте ваш email",
+            "instructionsSent": "Инструкции по сбросу пароля отправлены",
+            "emailDescription": "Если вы регистрировались с помощью email и пароля, вы получите email для сброса пароля."
         },
         "updatePassword": {
             "title": "Обновить пароль",

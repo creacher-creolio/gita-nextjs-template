@@ -49,19 +49,38 @@
             "forgotPassword": "Passwort vergessen?"
         },
         "signUp": {
-            "title": "Konto Erstellen",
+            "title": "Registrieren",
+            "description": "Neues Konto erstellen",
             "email": "E-Mail",
             "password": "Passwort",
+            "repeatPassword": "Passwort wiederholen",
+            "signUp": "Registrieren",
+            "creating": "Konto wird erstellt...",
+            "alreadyHaveAccount": "Haben Sie bereits ein Konto?",
+            "login": "Anmelden",
+            "passwordMismatch": "Passwörter stimmen nicht überein",
+            "genericError": "Ein Fehler ist aufgetreten",
+            "showPassword": "Passwort anzeigen",
+            "hidePassword": "Passwort verbergen",
+            "showRepeatPassword": "Passwort-Wiederholung anzeigen",
+            "hideRepeatPassword": "Passwort-Wiederholung verbergen",
             "confirmPassword": "Passwort Bestätigen",
             "createAccount": "Konto Erstellen",
             "hasAccount": "Haben Sie bereits ein Konto?",
             "signIn": "Anmelden"
         },
         "forgotPassword": {
-            "title": "Passwort Zurücksetzen",
+            "title": "Passwort zurücksetzen",
+            "description": "Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen einen Link zum Zurücksetzen Ihres Passworts",
             "email": "E-Mail",
-            "resetPassword": "Passwort Zurücksetzen",
-            "backToLogin": "Zurück zur Anmeldung"
+            "resetPassword": "Reset-E-Mail senden",
+            "sending": "Wird gesendet...",
+            "backToLogin": "Haben Sie bereits ein Konto?",
+            "login": "Anmelden",
+            "genericError": "Ein Fehler ist aufgetreten",
+            "checkEmail": "E-Mail überprüfen",
+            "instructionsSent": "Anweisungen zum Zurücksetzen des Passworts gesendet",
+            "emailDescription": "Wenn Sie sich mit Ihrer E-Mail-Adresse und Ihrem Passwort registriert haben, erhalten Sie eine E-Mail zum Zurücksetzen des Passworts."
         },
         "updatePassword": {
             "title": "Passwort Aktualisieren",

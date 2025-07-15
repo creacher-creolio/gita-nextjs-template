@@ -6,12 +6,16 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 
-export default async function ProtectedPage() {
+interface ProtectedPageProps {
+    params: { locale: string };
+}
+
+export default async function ProtectedPage({ params }: ProtectedPageProps) {
     const supabase = await createClient();
 
     const { data, error } = await supabase.auth.getUser();
     if (error || !data?.user) {
-        redirect("/auth/login");
+        redirect(`/${params.locale}/auth/login`);
     }
 
     const t = await getTranslations("protected");

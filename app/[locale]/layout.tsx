@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 
-import { routing } from "@/i18n/routing";
+import { SUPPORTED_LOCALES, localeUtils } from "@/i18n/locales";
 
 import "../globals.css";
 
@@ -25,7 +25,7 @@ type Props = {
 };
 
 export function generateStaticParams() {
-    return routing.locales.map(locale => ({ locale }));
+    return SUPPORTED_LOCALES.map(locale => ({ locale }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -42,12 +42,12 @@ export default async function LocaleLayout({ children, params }: Props) {
     const { locale } = await params;
 
     // Ensure that the incoming `locale` is valid
-    if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
+    if (!localeUtils.isSupported(locale)) {
         notFound();
     }
 
-    // Providing all messages to the client side is the easiest way to get started
-    const messages = await getMessages();
+    // Providing all messages to the client side for the specific locale
+    const messages = await getMessages({ locale });
 
     return (
         <html lang={locale}>

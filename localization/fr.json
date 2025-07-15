@@ -49,19 +49,38 @@
             "forgotPassword": "Mot de passe oublié ?"
         },
         "signUp": {
-            "title": "Créer un Compte",
+            "title": "S'inscrire",
+            "description": "Créer un nouveau compte",
             "email": "Email",
             "password": "Mot de passe",
+            "repeatPassword": "Répéter le mot de passe",
+            "signUp": "S'inscrire",
+            "creating": "Création du compte...",
+            "alreadyHaveAccount": "Vous avez déjà un compte ?",
+            "login": "Se Connecter",
+            "passwordMismatch": "Les mots de passe ne correspondent pas",
+            "genericError": "Une erreur s'est produite",
+            "showPassword": "Afficher le mot de passe",
+            "hidePassword": "Masquer le mot de passe",
+            "showRepeatPassword": "Afficher la répétition du mot de passe",
+            "hideRepeatPassword": "Masquer la répétition du mot de passe",
             "confirmPassword": "Confirmer le Mot de passe",
             "createAccount": "Créer un Compte",
             "hasAccount": "Vous avez déjà un compte ?",
             "signIn": "Se Connecter"
         },
         "forgotPassword": {
-            "title": "Réinitialiser le Mot de passe",
+            "title": "Réinitialiser votre mot de passe",
+            "description": "Saisissez votre email et nous vous enverrons un lien pour réinitialiser votre mot de passe",
             "email": "Email",
-            "resetPassword": "Réinitialiser le Mot de passe",
-            "backToLogin": "Retour à la Connexion"
+            "resetPassword": "Envoyer l'email de réinitialisation",
+            "sending": "Envoi en cours...",
+            "backToLogin": "Vous avez déjà un compte ?",
+            "login": "Se Connecter",
+            "genericError": "Une erreur s'est produite",
+            "checkEmail": "Vérifiez votre email",
+            "instructionsSent": "Instructions de réinitialisation du mot de passe envoyées",
+            "emailDescription": "Si vous vous êtes inscrit avec votre email et mot de passe, vous recevrez un email de réinitialisation du mot de passe."
         },
         "updatePassword": {
             "title": "Mettre à jour le Mot de passe",
