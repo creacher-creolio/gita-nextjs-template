@@ -29,11 +29,13 @@ git switch -c <branchName>  # switch while creating a new branch
 
 ### Aliases
 git config --global alias.ca '!git add . && git commit -m'  # create an alias command that adds and commits at the same time
+git ca "<some message>"
 git config --global alias.sa '!git add . && git stash'  # create an alias command that adds and stashes at the same time
+git sa
 git config --global alias.sp '!git stash pop'  # create an alias command that pops the top layer of the stash
-git ca "<some message>" # commit and add at the same time (after alias has been created)
-git sa # stash and add at the same time (after alias has been created)
-git sp # pop the top layer of the stash (after alias has been created)
+git sp
+git config --global alias.nb '!f() { git checkout -b jonathanknebel/$1; }; f'  # create an alias command that creates and switches to a new branch with your github username as a prefix
+git nb 'testBranch'
 
 ### File Management
 git rm <some file> --cached  # remove a file from git while keeping it locally
