@@ -27,6 +27,10 @@ git stash clear # delete all stashes
 git switch <branchName>  # store changes and apply them to the branch you're switching to; create branch at the same time if doesn't exist
 git switch -c <branchName>  # switch while creating a new branch
 
+###
+git config --global push.default current
+git config --global push.autoSetupRemote origin
+
 ### Aliases
 git config --global alias.ca '!git add . && git commit -m'  # create an alias command that adds and commits at the same time
 git ca "<some message>"
@@ -47,7 +51,9 @@ git reset HEAD~ # undo last commit (keeps changes)
 git push --delete origin <branchName>  # delete a remote branch
 git merge --abort  # abort a merge
 git diff <new-branch>..<old-branch>  # check if any commits inside the one branch are in the other (great for preparing to delete old branches that you're not sure are OK to delete)
-git branch --merged main | Where-Object { $_ -notmatch '^\*' } | ForEach-Object { git branch -d $_.Trim() } # removes all local branches that have already been merged into main
+git branch --no-merged main  # lists all local branches that have commits not merged into main
+git branch --merged main  # lists all local branches that have been merged into main
+git branch --merged main | xargs git branch -d # removes all local branches that are already merged into main
 
 ## ADVANCED COMMANDS ##
 git reset master # !!!CAREFUL!!!: sets the head of master to the current branch--useful if you want to revert to an old commit by checking out the old commit hash as a branch and then copying that spot in the history to the top of the head/history
